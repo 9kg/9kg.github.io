@@ -3707,11 +3707,10 @@ window.Zepto = Zepto,
                 }).done(function(e) {
                     if (!e.errorCode) {
                         console.info("%c" + h + ":" + m + ",成功","color:#3385FF;font-size:20px;");
-                        Math.random() < 0.1 ? console.log("%c(~~耍了这么久，拜托打赏一个啦~~)","color:#f00;font-size:16px;") : console.log("👌👌👌😄👌👌👌");
+                        Math.random() < 0.1 ? console.log("%c(~~耍了这么久，拜托打赏一个啦~~)","color:#f00;font-size:16px;") : console.log("被海洋蠢哭了👌👌👌😄👌👌👌");
                     } else {
                         console.warn(h + ":" + m + ",(这个已领取，领取下一个中。。。)");
                     }
-                    console.dir(e);
                     idxArr.push(idx);
                     console.groupEnd();
                 }).fail(function(e) {
