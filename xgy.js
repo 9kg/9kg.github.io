@@ -3692,7 +3692,6 @@ window.Zepto = Zepto,
         var dataid = $(".task-list li").attr("data-id");
         var idxArr = [];
         $(".audio-container").show();
-        alert(111);
         (function getGold(print) {var dt = new Date;
             var h = dt.getHours();
             var m = dt.getMinutes();
@@ -3700,7 +3699,7 @@ window.Zepto = Zepto,
             var idx = (h - 7) * 2 + (m > 29 ? 1 : 0);
             var delayT = Math.random()*10+1;
             if (!~$.inArray(idx, idxArr)) {
-            (idxArr.length || print) && $(".audio-container").append("第"+(idx+1)+"个金币领取中");
+            (idxArr.length || print) && $(".audio-container").append("第"+(idx+1)+"个金币领取中<br>");
                 $.post("http://todaytask.x3china.com/newTodayTask/task/gold/addGold?timestamp=" + (+new Date), {
                     accessToken: url("?accessToken"),
                     taskId: dataid,
@@ -3708,20 +3707,20 @@ window.Zepto = Zepto,
                     xy: today.xy(dataid, idx)
                 }).done(function(e) {
                     if (!e.errorCode) {
-                        $(".audio-container").append(h + ":" + m + ",成功");
+                        $(".audio-container").append(h + ":" + m + ",成功<br>");
                     } else {
-                        $(".audio-container").append(h + ":" + m + ",(这个已领取，领取下一个中。。。)");
+                        $(".audio-container").append(h + ":" + m + ",(这个已领取，领取下一个中。。。)<br>");
                     }
                     idxArr.push(idx);
                     console.groupEnd();
                 }).fail(function(e) {
-                    $(".audio-container").append(h + ":" + m + ",失败");
+                    $(".audio-container").append(h + ":" + m + ",失败<br>");
                 });
             }
             setTimeout(function() {
                 getGold();
             }, 1000 * 60 * delayT);
-            $(".audio-container").append(h + ":" + m + "该程序"+delayT.toFixed(2)+"分钟后再跑~");
+            $(".audio-container").append(h + ":" + m + "该程序"+delayT.toFixed(2)+"分钟后再跑~<br>");
         })(true);
     }),
     define("today", function() {});
