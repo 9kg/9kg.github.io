@@ -3698,7 +3698,7 @@ window.Zepto = Zepto,
             var idx = (h - 7) * 2 + (m > 29 ? 1 : 0);
             var delayT = Math.random()*10+1;
             if (!~$.inArray(idx, idxArr)) {
-            (idxArr.length || print) && console.group("第"+(idx+1)+"个金币领取中");
+            (idxArr.length || print) && $(".audio-container").append("第"+(idx+1)+"个金币领取中");
                 $.post("http://todaytask.x3china.com/newTodayTask/task/gold/addGold?timestamp=" + (+new Date), {
                     accessToken: url("?accessToken"),
                     taskId: dataid,
