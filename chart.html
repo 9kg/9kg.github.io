@@ -219,6 +219,16 @@
                     value: "price_sdk",
                     type: "bar",
                     stack: "任务销售额"
+                }, {
+                    name: "有米任务销售额",
+                    value: "price_youmi.price",
+                    type: "bar",
+                    stack: "联盟任务销售额"
+                }, {
+                    name: "万普任务销售额",
+                    value: "price_waps.price",
+                    type: "bar",
+                    stack: "联盟任务销售额"
                 }], list),
                 getDayOpt([{
                     name: "累计用户数量",
@@ -235,7 +245,7 @@
                 }, {
                     name: "日活",
                     value: "uid_log_count"
-                }], list),
+                }], list)
             ];
 
             $("ul li:first-child").trigger("click");
