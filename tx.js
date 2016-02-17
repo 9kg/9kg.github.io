@@ -1,2 +1,2 @@
 alert(11);
-$(".submit").text(11111);
+$(".submit").html(11111);
