@@ -1,0 +1,14 @@
+{
+    "status": 1,
+    "msg": "请求成功",
+    "data": [{
+        "link": "http://www.baidu.com",
+        "icon_url": "http://icon.nipic.com/BannerPic/20161102/home/20161102123234.jpg"
+    }, {
+        "link": "#page_url",
+        "icon_url": "http://icon.nipic.com/BannerPic/20161102/home/20161102123234.jpg"
+    }, {
+        "link": "#page_url2",
+        "icon_url": "http://icon.nipic.com/BannerPic/20161102/home/20161102123234.jpg"
+    }]
+}
