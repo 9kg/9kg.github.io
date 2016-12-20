@@ -3,12 +3,12 @@
     "msg": "请求成功",
     "data": [{
         "link": "http://www.baidu.com",
-        "icon_url": "http://icon.nipic.com/BannerPic/20161102/home/20161102123234.jpg"
+        "icon_url": "http://image.taobao.com/bao/uploaded/i3/2578888225/TB2m4mNebaI.eBjy1XdXXcoqXXa_!!2578888225.png_640x640.jpg"
     }, {
         "link": "#page_url",
-        "icon_url": "http://icon.nipic.com/BannerPic/20161102/home/20161102123234.jpg"
+        "icon_url": "http://img04.taobaocdn.com/bao/uploaded/i4/TB1Rl4PMXXXXXX1aXXXXXXXXXXX_!!0-item_pic.jpg_640x640.jpg"
     }, {
         "link": "#page_url2",
-        "icon_url": "http://icon.nipic.com/BannerPic/20161102/home/20161102123234.jpg"
+        "icon_url": "http://image.taobao.com/bao/uploaded/i7/TB1e_efOpXXXXbIXpXXYXGcGpXX_M2.SS2_640x640.jpg"
     }]
 }
