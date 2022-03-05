@@ -5,7 +5,8 @@ const cols = [
   { key: "initialPrice", label: "初始价"},
   { key: "currentPrice", label: "当前价"},
   { key: "consultPrice", label: "评估价"},
-  { key: "marketPrice", label: "市场价"},
+  // { key: "marketPrice", label: "市场价"},
+  { key: "finalPrice", label: "成交价"},
   { key: "sellOff", label: "是否变卖"},
   { key: "viewerCount", label: "围观人次"},
   { key: "bidCount", label: "出价次数"},
@@ -138,11 +139,14 @@ function createTable(data){
 
       for(var j = 0; j < cols.length; j++){
           const col = cols[j]
-          const value = values[col.key]
+          let value = values[col.key]
           var td;
           if(col.key === 'img'){
             td = $(`<td width="280">< img height="180" src="https:${value}"/></td>`);
           }else if(col.key === 'detail'){
+            td = $(`<td width="100"><a href=" ">https:${value}</a ></td>`);
+          }else if(col.key === 'finalPrice'){
+            value = values.bidCount > 0 ? values.currentPrice : '-'
             td = $(`<td width="100"><a href=" ">https:${value}</a ></td>`);
           }else{
             td = $(`<td>${value}</td>`)
