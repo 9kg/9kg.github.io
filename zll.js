@@ -52,7 +52,7 @@ function getSubscribersNum(ids){
   })
 }
 
-let { data = []} = JSON.parse(document.getElementById('sf-item-list-data').innerHTML)
+var { data = []} = JSON.parse(document.getElementById('sf-item-list-data').innerHTML)
 
 data = data.map(item => {
   return {
