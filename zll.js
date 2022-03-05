@@ -1,4 +1,4 @@
-const cols = [
+var cols = [
   // { key: "id", label: "唯一标识"},
   { key: "title", label: "标题"},
   { key: "status", label: "状态"},
@@ -29,7 +29,7 @@ const cols = [
   { key: "credit", label: "credit"},
 ]
 
-const statusMapping = {
+var statusMapping = {
   todo: '即将开始',
   doing: '正在进行',
   done: '已结束',
