@@ -147,7 +147,7 @@ function createTable(data){
             td = $(`<td width="100"><a href=" ">https:${value}</a ></td>`);
           }else if(col.key === 'finalPrice'){
             value = values.bidCount > 0 ? values.currentPrice : '-'
-            td = $(`<td width="100"><a href=" ">https:${value}</a ></td>`);
+            td = $(`<td width="100">${value}</td>`);
           }else{
             td = $(`<td>${value}</td>`)
           }
