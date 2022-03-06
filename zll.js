@@ -141,9 +141,9 @@ function createTable(data){
           const col = cols[j]
           let value = values[col.key]
           var td;
-          if(col.key === 'img'){
+          if(col.key === 'picUrl'){
             td = $(`<td width="280">< img height="180" src="https:${value}"/></td>`);
-          }else if(col.key === 'detail'){
+          }else if(col.key === 'itemUrl'){
             td = $(`<td width="100"><a href="https:${value}">https:${value}</a ></td>`);
           }else if(col.key === 'finalPrice'){
             value = values.bidCount > 0 ? values.currentPrice : '-'
