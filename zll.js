@@ -142,9 +142,11 @@ function createTable(data){
           let value = values[col.key]
           var td;
           if(col.key === 'picUrl'){
-            td = $(`<td width="280">< img height="180" src="https:${value}"/></td>`);
+            td = $(`<td width="280"><img height="180" src="https:${value}"/></td>`);
           }else if(col.key === 'itemUrl'){
             td = $(`<td width="100"><a href="https:${value}">https:${value}</a ></td>`);
+          }else if(col.key === 'title'){
+            td = $(`<td width="100"><a href="https:${values.itemUrl}">${value}</a ></td>`);
           }else if(col.key === 'finalPrice'){
             value = values.bidCount > 0 ? values.currentPrice : '-'
             td = $(`<td width="100">${value}</td>`);
