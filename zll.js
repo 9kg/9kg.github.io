@@ -67,7 +67,7 @@ data = data.map(item => {
     supportOrgLoan: getBoolDesc(item.supportOrgLoan),
     initialPrice: formatPrice(item.initialPrice),
     currentPrice: formatPrice(item.currentPrice),
-    consultPrice: formatPrice(item.consultPrice),
+    consultPrice: item.consultPrice ? formatPrice(item.consultPrice) : formatPrice(item.marketPrice),
     marketPrice: formatPrice(item.marketPrice),
     sellOff: getBoolDesc(item.sellOff),
   }
@@ -144,7 +144,7 @@ function createTable(data){
           if(col.key === 'img'){
             td = $(`<td width="280">< img height="180" src="https:${value}"/></td>`);
           }else if(col.key === 'detail'){
-            td = $(`<td width="100"><a href=" ">https:${value}</a ></td>`);
+            td = $(`<td width="100"><a href="https:${value}">https:${value}</a ></td>`);
           }else if(col.key === 'finalPrice'){
             value = values.bidCount > 0 ? values.currentPrice : '-'
             td = $(`<td width="100">${value}</td>`);
